@@ -1,0 +1,15 @@
+#output{
+    margin-top: 50px;
+    border: 1px solid #000000;
+    padding-bottom: 400px;
+    margin-right: 1000px;
+    margin-left: 150px;
+}
+
+#input{
+    margin-left: 150px;
+}
+
+#user_link{
+    padding-right: 150px;
+}
