@@ -15,7 +15,15 @@ submit.addEventListener("click", link_gen);
 function link_gen(){
     var input = document.getElementById('user_link');
     input = input.value;
-    input = input.substring(44, input.length);
+    if (input.includes("product")){
+        input = input.substring(input.indexOf("product") + 8);
+    } else if (input.includes("grid")){
+        input = input.substring(input.indexOf("grid") + 5);
+    }else{
+        input = "Unknown link. Please use link that had either grid or product in the URL";
+        output_text.innerHTML = input;
+        return;
+    }
     if (platform == "PlayStation"){
         var start = "psns:browse?product="
         input = start + input
@@ -25,6 +33,8 @@ function link_gen(){
         // When my short domain is up, this address will change.
         var start = "http://orbisconverter.com/short.html?"
         input = start + input
+        console.log(input)
+        console.log(input)
     }
     input = input.link(input);
     var test = ((input + "<br>" + output_text.innerHTML))
