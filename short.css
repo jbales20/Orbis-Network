@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'mikan';
+    src: url('fonts/mikan.woff2') format('woff2'),
+         url('fonts/mikan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'sound bubble';
+    src: url('fonts/sound_bubble.woff2') format('woff2'),
+         url('fonts/sound_bubble.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#title{
+    font-family: "mikan";
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #FFFFFF;
+    font-weight: normal;
+    position: relative;
+    left: 60px;
+    font-size: 45px;
+    top: -40px;
+}
+
+
+#top{
+    background: #20208A;
+    background: -moz-linear-gradient(left, #20208A 0%, #2C2CBF 75%, #3535E3 100%);
+    background: -webkit-linear-gradient(left, #20208A 0%, #2C2CBF 75%, #3535E3 100%);
+    background: linear-gradient(to right, #20208A 0%, #2C2CBF 75%, #3535E3 100%);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-height: 60px;
+}
+
+
+#label{
+    font-family: 'sound bubble';
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    position: relative;
+    left: 150px;
+    top: 100px;
+}
+
+#test{
+    position: relative;
+    top: 600px;
+}

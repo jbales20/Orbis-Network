@@ -15,15 +15,33 @@ submit.addEventListener("click", link_gen);
 function link_gen(){
     var input = document.getElementById('user_link');
     input = input.value;
-    input = input.substring(51, input.length - 20);
+    input = input.substring(44, input.length);
     if (platform == "PlayStation"){
         var start = "psns:browse?product="
         input = start + input
+        platform_text.innerHTML = "You're platform is PlayStation"
     }else{
-        var start = "https://orbis.click/"
+        platform_text.innerHTML = "You're not on PlayStation"
+        // When my short domain is up, this address will change.
+        var start = "http://orbisconverter.com/short.html?"
         input = start + input
     }
     input = input.link(input);
     var test = ((input + "<br>" + output_text.innerHTML))
     output_text.innerHTML = test
+}
+
+function start(){
+    platform_text = document.querySelector("#platform");
+    directions = document.querySelector("#directions");
+    document.getElementById("container").style.width = document.getElementById("user_link").style.width + "370px";
+    if (platform == "PlayStation"){
+        platform_text.innerHTML = "You're platform is PlayStation"
+        directions.innerHTML = "In a new tab, copy a store.playstation.com link and then place it into the textbox next to convert. Press convert." +
+        " Click on the link inside the output.";
+        }else{
+        directions.innerHTML = "In a new tab, copy a store.playstation.com link and then place it into the textbox next to convert. Press convert." +
+        " Afterwards, on your PlayStation, open your browser and visit the orbis.click website.";
+        platform_text.innerHTML = "You're not on PlayStation"
+    }
 }
